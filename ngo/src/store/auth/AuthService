@@ -1,0 +1,27 @@
+import Client from "../../client/Client";
+import config from "../../config/Config";
+
+const baseUrl = "http://localhost:5173";
+const { apiBaseUrl } = config || {};
+
+export const getAccessTokenUsingRefreshToken = async (params) => {
+  try {
+    const { data } = await Client.post("/refreshToken", params);
+    if (data?.statusCode === 200) {
+      localStorage.setItem("token", data?.data?.accessToken);
+      localStorage.setItem("refreshToken", data?.data?.refreshToken);
+      return data?.data?.accessToken;
+    } else {
+      localStorage.clear();
+      window.location.href = baseUrl;
+    }
+  } catch (error) {
+    localStorage.clear();
+    window.location.href = baseUrl;
+  }
+};
+
+export const logout = () => {
+  localStorage.clear();
+  window.location.href = apiBaseUrl + "/signout";
+};
