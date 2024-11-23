@@ -1,5 +1,6 @@
 import Client from "../../client/Client";
 import config from "../../config/Config";
+import { setNavBarList } from "./Auth";
 
 const baseUrl = "http://localhost:5173";
 
@@ -18,14 +19,16 @@ export const getAccessTokenUsingRefreshToken = async (params) => {
   }
 };
 
-export const getNavList = async (params = {}) => {
+export const getNavList = () => async (dispatch) => {
   try {
-    return ["home", "contact"];
+    const list = ["home", "contact"];
+    dispatch(setNavBarList(list));
+    return list;
 
     /*  
      *   **After API completed uncomment this **
 
-    const { data } = await Client.get("/navList", { params });
+    const { data } = await Client.get("/navList", {});
     if (data?.statusCode === 200) {
       return data?.data?.nav;
     } else {

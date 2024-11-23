@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   loading: false,
+  navBarList: [],
 };
 
 const userSlice = createSlice({
@@ -11,9 +12,12 @@ const userSlice = createSlice({
     setLoading: (state, action) => {
       state.loading = action.payload;
     },
+    setNavBarList: (state, action) => {
+      state.navBarList = action.payload;
+    },
   },
 });
 
-export const { setLoading } = userSlice.actions;
+export const { setLoading, setNavBarList } = userSlice.actions;
 
 export default userSlice.reducer;

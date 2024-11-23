@@ -3,24 +3,11 @@ import { Suspense } from "react";
 import Layout from "../component/layout_1/layout/Layout";
 import ErrorPage from "../ErrorPage";
 import { getNavList } from "../store/auth/AuthService";
+import { componentMapping } from "./ComponentMapping";
 
-import { HomePage, ContactPage } from "./lazy";
-
-const componentMapping = {
-  home: {
-    path: "/home",
-    component: <HomePage />,
-  },
-  contact: {
-    path: "/contact",
-    component: <ContactPage />,
-  },
-};
-
-const generateRoutes = async () => {
+const generateRoutes = async (dispatch) => {
   try {
-    const data = await getNavList({});
-
+    const data = await dispatch(getNavList({}));
     const dynamicRoutes = data
       .map((routeName) => {
         const routeInfo = componentMapping[routeName];
@@ -65,8 +52,8 @@ const generateRoutes = async () => {
   }
 };
 
-export const router = async () => {
-  const routes = await generateRoutes();
+export const router = async (dispatch) => {
+  const routes = await generateRoutes(dispatch);
 
   return createBrowserRouter([
     {
