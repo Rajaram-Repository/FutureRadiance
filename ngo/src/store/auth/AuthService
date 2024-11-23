@@ -2,7 +2,6 @@ import Client from "../../client/Client";
 import config from "../../config/Config";
 
 const baseUrl = "http://localhost:5173";
-const { apiBaseUrl } = config || {};
 
 export const getAccessTokenUsingRefreshToken = async (params) => {
   try {
@@ -12,16 +11,34 @@ export const getAccessTokenUsingRefreshToken = async (params) => {
       localStorage.setItem("refreshToken", data?.data?.refreshToken);
       return data?.data?.accessToken;
     } else {
-      localStorage.clear();
-      window.location.href = baseUrl;
+      handleAuthRedirect();
     }
   } catch (error) {
-    localStorage.clear();
-    window.location.href = baseUrl;
+    handleAuthRedirect();
   }
 };
 
-export const logout = () => {
+export const getNavList = async (params = {}) => {
+  try {
+    return ["home", "contact"];
+
+    /*  
+     *   **After API completed uncomment this **
+
+    const { data } = await Client.get("/navList", { params });
+    if (data?.statusCode === 200) {
+      return data?.data?.nav;
+    } else {
+      console.error(`Error: Received statusCode ${data?.statusCode}`);
+      throw Error("No Nav List.");
+    }
+    */
+  } catch (error) {
+    console.error("Error fetching navigation list:", error.message);
+  }
+};
+
+const handleAuthRedirect = () => {
   localStorage.clear();
-  window.location.href = apiBaseUrl + "/signout";
+  window.location.href = baseUrl;
 };
