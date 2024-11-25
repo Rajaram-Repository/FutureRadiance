@@ -10,6 +10,7 @@ function Org() {
   const [pageNo] = useState(1);
   const [searchValue] = useState("");
 
+  const orgLoading = useSelector((state) => state?.orgData?.orgLoading);
   const orgList = useSelector((state) => state?.orgData?.orgList);
 
   const getHeaders = (data) => {
@@ -33,8 +34,10 @@ function Org() {
       <div className={cx(s.org)}>
         <div className={cx(s.filterContainer)}></div>
         <div className={cx(s.tableContainer)}>
-          {orgList && orgList.length > 0 ? (
-            <table>
+          {orgLoading ? (
+            <div className={cx(s.loading)}>Loading...</div>
+          ) : orgList && orgList.length > 0 ? (
+            <table className={cx(s.orgTable)}>
               <thead>
                 <tr>
                   {headers.map((header, index) => (
@@ -51,7 +54,7 @@ function Org() {
                   <tr key={rowIndex} className={cx(s.tableRow)}>
                     {headers.map((header, colIndex) => (
                       <td key={colIndex} className={cx(s.tableData)}>
-                        {org[header]}
+                        {org[header] || "-"}{" "}
                       </td>
                     ))}
                   </tr>
