@@ -4,10 +4,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import { getOrg } from "../../../../store/org/OrgService";
 import { VIEW_COUNT } from "../../../utils/constant";
+import Pagination from "../../../utils/pagination/Pagination";
 
 function Org() {
   const dispatch = useDispatch();
-  const [pageNo] = useState(1);
+  const [currentPage, setCurrentPage] = useState(1);
+  const totalPages = 10;
   const [searchValue] = useState("");
 
   const orgLoading = useSelector((state) => state?.orgData?.orgLoading);
@@ -21,12 +23,12 @@ function Org() {
 
   useEffect(() => {
     const handler = setTimeout(() => {
-      dispatch(getOrg({ pageNo, VIEW_COUNT, searchValue }));
+      dispatch(getOrg({ pageNo: currentPage, VIEW_COUNT, searchValue }));
     }, 50);
     return () => {
       clearTimeout(handler);
     };
-  }, [dispatch, pageNo, searchValue]);
+  }, [dispatch, currentPage, searchValue]);
 
   return (
     <div className={cx(s.orgContainer)}>
@@ -64,6 +66,13 @@ function Org() {
             <div className={cx(s.noData)}>No organization data available</div>
           )}
         </div>
+      </div>
+      <div className={cx(s.pagination)}>
+        <Pagination
+          currentPage={currentPage}
+          totalPages={totalPages}
+          onPageChange={setCurrentPage}
+        />
       </div>
     </div>
   );
