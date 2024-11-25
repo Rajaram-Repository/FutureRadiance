@@ -1,4 +1,4 @@
-import { HomePage, ContactPage } from "./Lazy";
+import { HomePage, ContactPage, Org, AddOrg } from "./Lazy";
 
 export const componentMapping = {
   home: {
@@ -11,4 +11,15 @@ export const componentMapping = {
     path: "/contact",
     component: <ContactPage />,
   },
+  org: {
+    name: "Org",
+    path: "/org",
+    component: <Org />,
+  },
+  addOrg: {
+    name: "Add Org",
+    path: "/addOrg",
+    component: <AddOrg />,
+  },
 };
+

@@ -3,20 +3,20 @@
   overflow: hidden;
   border: none;
   border-collapse: collapse;
-  border-radius: 8px;
+  border-radius: 5px;
 
   thead {
     background-color: #bbdbfc;
 
     tr {
-      height: 35px;
+      height: 40px;
       border: none;
 
-      td {
+      th {
         min-width: 50px;
         max-width: 80px;
-        color: #656565;
-        font-size: 13px;
+        color: #5b5858;
+        font-size: 14px;
         font-weight: 500;
         padding: 12px;
         text-align: center;
@@ -29,7 +29,7 @@
 
   tbody {
     tr {
-      height: 40px;
+      height: 45px;
       border-bottom: 1px solid #ddd;
 
       &:hover {

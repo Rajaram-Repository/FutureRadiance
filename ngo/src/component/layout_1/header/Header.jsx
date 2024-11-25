@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import { Link, useLocation } from "react-router-dom";
 import cx from "classnames";
 import s from "./Header.module.scss";
-import { componentMapping } from "../../../routes/ComponentMapping";
+import { navigationBarList } from "../../utils/constant";
 
 function Header() {
   const navBarList = useSelector((state) => state?.userData?.navBarList);
@@ -13,7 +13,7 @@ function Header() {
       <div className={cx(s.navContainer)}>
         {navBarList &&
           navBarList.map((key) => {
-            const navItem = componentMapping[key];
+            const navItem = navigationBarList[key];
             if (navItem) {
               const isActive = location.pathname === navItem.path;
               return (

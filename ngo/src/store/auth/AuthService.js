@@ -1,5 +1,4 @@
-import Client from "../../client/Client";
-import config from "../../config/Config";
+import Client from "../../client/Client.js";
 import { setNavBarList } from "./Auth";
 
 const baseUrl = "http://localhost:5173";
@@ -15,18 +14,19 @@ export const getAccessTokenUsingRefreshToken = async (params) => {
       handleAuthRedirect();
     }
   } catch (error) {
+    console.error(`Error: ${error}`);
     handleAuthRedirect();
   }
 };
 
 export const getNavList = () => async (dispatch) => {
   try {
-    const list = ["home", "contact"];
+    const list = ["home", "contact", "org", "addOrg"];
     dispatch(setNavBarList(list));
     return list;
 
     /*  
-     *   **After API completed uncomment this **
+    **After API completed uncomment this **
 
     const { data } = await Client.get("/navList", {});
     if (data?.statusCode === 200) {
@@ -35,6 +35,7 @@ export const getNavList = () => async (dispatch) => {
       console.error(`Error: Received statusCode ${data?.statusCode}`);
       throw Error("No Nav List.");
     }
+
     */
   } catch (error) {
     console.error("Error fetching navigation list:", error.message);
