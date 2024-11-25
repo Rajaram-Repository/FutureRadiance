@@ -22,7 +22,7 @@ function Org() {
   useEffect(() => {
     const handler = setTimeout(() => {
       dispatch(getOrg({ pageNo, VIEW_COUNT, searchValue }));
-    }, 200);
+    }, 50);
     return () => {
       clearTimeout(handler);
     };
@@ -30,9 +30,8 @@ function Org() {
 
   return (
     <div className={cx(s.orgContainer)}>
-      <div className={cx(s.pageContainer)}></div>
+      <div className={cx(s.filterContainer)}></div>
       <div className={cx(s.org)}>
-        <div className={cx(s.filterContainer)}></div>
         <div className={cx(s.tableContainer)}>
           {orgLoading ? (
             <div className={cx(s.loading)}>Loading...</div>
@@ -54,7 +53,7 @@ function Org() {
                   <tr key={rowIndex} className={cx(s.tableRow)}>
                     {headers.map((header, colIndex) => (
                       <td key={colIndex} className={cx(s.tableData)}>
-                        {org[header] || "-"}{" "}
+                        {org[header] || "-"}
                       </td>
                     ))}
                   </tr>
