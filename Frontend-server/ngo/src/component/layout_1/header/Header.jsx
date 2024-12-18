@@ -7,6 +7,7 @@ import { navigationBarList } from "../../utils/constant";
 function Header() {
   const navBarList = useSelector((state) => state?.userData?.navBarList);
   const location = useLocation();
+  console.log("1");
 
   return (
     <div className={cx(s.headerContainer)}>

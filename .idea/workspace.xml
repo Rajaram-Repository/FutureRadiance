@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a4a373aa-2329-48cc-834f-3738679814dd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/eslint.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/public/vite.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/App.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/ErrorPage.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/fonts/Montserrat/OFL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/fonts/Montserrat/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/fonts/Montserrat/static/Montserrat-Black.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/fonts/Montserrat/static/Montserrat-BlackItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/fonts/Montserrat/static/Montserrat-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/fonts/Montserrat/static/Montserrat-BoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/fonts/Montserrat/static/Montserrat-ExtraBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/fonts/Montserrat/static/Montserrat-ExtraBoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/fonts/Montserrat/static/Montserrat-ExtraLight.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/fonts/Montserrat/static/Montserrat-ExtraLightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/fonts/Montserrat/static/Montserrat-Italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/fonts/Montserrat/static/Montserrat-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/fonts/Montserrat/static/Montserrat-LightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/fonts/Montserrat/static/Montserrat-Medium.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/fonts/Montserrat/static/Montserrat-MediumItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/fonts/Montserrat/static/Montserrat-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/fonts/Montserrat/static/Montserrat-SemiBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/fonts/Montserrat/static/Montserrat-SemiBoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/fonts/Montserrat/static/Montserrat-Thin.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/fonts/Montserrat/static/Montserrat-ThinItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/fonts/Plus_Jakarta_Sans/OFL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/fonts/Plus_Jakarta_Sans/PlusJakartaSans-Italic-VariableFont_wght.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/fonts/Plus_Jakarta_Sans/PlusJakartaSans-VariableFont_wght.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/fonts/Plus_Jakarta_Sans/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-BoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-ExtraBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-ExtraBoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-ExtraLight.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-ExtraLightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-Italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-LightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-Medium.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-MediumItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-SemiBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/fonts/Plus_Jakarta_Sans/static/PlusJakartaSans-SemiBoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/images/Bin.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/images/C.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/images/DownArrow.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/images/Edit.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/images/LeftArrow.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/images/Plus.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/images/Search.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/images/ThreeDot.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/scss/fonts.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/assets/scss/mixins.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/client/Client.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/component/layout_1/examples/ContactPage.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/component/layout_1/examples/HomePage.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/component/layout_1/header/Header.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/component/layout_1/header/Header.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/component/layout_1/layout/Layout.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/component/layout_1/layout/Layout.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/component/layout_1/org/addOrg/AddOrg.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/component/layout_1/org/addOrg/AddOrg.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/component/layout_1/org/viewOrg/Org.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/component/layout_1/org/viewOrg/Org.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/component/utils/Constant.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/component/utils/DummyData.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/component/utils/Utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/component/utils/images/Images.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/component/utils/pagination/Pagination.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/component/utils/pagination/Pagination.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/component/utils/search/SearchComponent.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/component/utils/search/SearchComponent.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/component/utils/select/CustomMutilSelect.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/component/utils/select/CustomSelect.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/component/utils/select/CustomSelect.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/config/config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/main.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/routes/ComponentMapping.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/routes/index.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/routes/lazy.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/store/auth/Auth.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/store/auth/AuthService.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/store/org/Org.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/store/org/OrgService.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/src/store/store.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ngo/vite.config.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/ngo_v1" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "ModernMonk27"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/ShanmugaSundaramA/SmileFoundationIndia.git",
+    "accountId": "564e2f19-1693-40ac-a052-3020e929ecc7"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2qNJfuAX0v23aqI73DRH5YRo1kC" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "ngo__v1",
+    "last_opened_file_path": "C:/Users/Alphi-Aravind.S/Projects/Crm_Ngo/RajaFoundation/Sundarbranch/SmileFoundationIndia",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-PY-243.21565.199" />
+        <option value="bundled-python-sdk-cab1f2013843-4ae2d6a61b08-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.21565.199" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a4a373aa-2329-48cc-834f-3738679814dd" name="Changes" comment="" />
+      <created>1734497205640</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1734497205640</updated>
+      <workItem from="1734497206944" duration="666000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/ngo_v1" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

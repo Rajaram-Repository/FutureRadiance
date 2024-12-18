@@ -20,6 +20,7 @@ function Org() {
     return Object.keys(data[0]);
   };
   const headers = getHeaders(orgList);
+  console.log("1")
 
   useEffect(() => {
     const handler = setTimeout(() => {
