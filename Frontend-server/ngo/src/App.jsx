@@ -10,6 +10,8 @@ function App() {
   useEffect(() => {
     const setupRouter = async () => {
       const generatedRouter = await router(dispatch);
+      console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!11",generatedRouter)
+
       setAppRouter(generatedRouter);
     };
 

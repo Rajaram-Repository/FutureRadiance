@@ -8,6 +8,9 @@ function Header() {
   const navBarList = useSelector((state) => state?.userData?.navBarList);
   const location = useLocation();
   console.log("1");
+  const navBarListCheck = useSelector((state) => state?.userData);
+  console.log("rrrrrrrrrrrrrrrrrrrrrrrrrrrrr",navBarListCheck)
+
 
   return (
     <div className={cx(s.headerContainer)}>

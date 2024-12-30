@@ -8,6 +8,7 @@ import { componentMapping } from "./ComponentMapping";
 const generateRoutes = async (dispatch) => {
   try {
     const data = await dispatch(getNavList({}));
+    console.log("ppppppppppppppppppppppppppppppppppppp",data)
     const dynamicRoutes = data
       .map((routeName) => {
         const routeInfo = componentMapping[routeName];
@@ -54,6 +55,8 @@ const generateRoutes = async (dispatch) => {
 
 export const router = async (dispatch) => {
   const routes = await generateRoutes(dispatch);
+  console.log("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$4",dispatch)
+  console.log("@@@@@@@@@@@@@@@@@@@@@@@@@22",routes)
 
   return createBrowserRouter([
     {
