@@ -1,0 +1,75 @@
+@mixin tableStyles() {
+  width: 100%;
+  overflow: hidden;
+  border: none;
+  border-collapse: collapse;
+  border-radius: 5px;
+
+  thead {
+    background-color: #bbdbfc;
+
+    tr {
+      height: 40px;
+      border: none;
+
+      th {
+        min-width: 50px;
+        max-width: 80px;
+        color: #5b5858;
+        font-size: 14px;
+        font-weight: 500;
+        padding: 12px;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      height: 45px;
+      border-bottom: 1px solid #ddd;
+
+      &:hover {
+        background-color: #ebf1fb;
+      }
+
+      td {
+        padding: 12px;
+        text-align: center;
+        vertical-align: middle;
+        color: #44464c;
+        font-size: 12px;
+        min-width: 50px;
+        max-width: 80px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        .actionContainer {
+          display: flex;
+          justify-content: center;
+
+          img {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+
+            &:hover {
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+    }
+
+    tr td[colspan] {
+      text-align: center;
+      padding: 20px;
+      color: #44464c;
+      font-size: 14px;
+    }
+  }
+}

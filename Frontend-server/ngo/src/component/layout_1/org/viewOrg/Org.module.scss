@@ -1,0 +1,70 @@
+@import "../../../../assets/scss/mixins.scss";
+
+.orgContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #e1edfd;
+
+  .filterContainer {
+    width: 100%;
+    min-height: 60px;
+    background-color: white;
+    border-radius: 3px;
+    padding: 0px 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    box-sizing: border-box;
+
+    .search,
+    .select {
+      height: 45px;
+      width: 200px;
+    }
+  }
+
+  .org {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 10px;
+    padding-bottom: 0px;
+    box-sizing: border-box;
+
+    .filterContainer,
+    .tableContainer {
+      height: 100%;
+      box-sizing: border-box;
+    }
+
+    .tableContainer {
+      flex-basis: 100%;
+
+      table {
+        @include tableStyles();
+
+        tbody {
+          background-color: white;
+        }
+      }
+
+      .noData {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  .pagination {
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-sizing: border-box;
+  }
+}
