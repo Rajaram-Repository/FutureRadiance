@@ -4,20 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4a373aa-2329-48cc-834f-3738679814dd" name="Changes" comment="structured folders">
-      <change afterPath="$PROJECT_DIR$/Frontend-server/ngo/src/component/layout_1/Students/CloneStudent.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend-server/ngo/src/component/layout_1/Students/StudentTable.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend-server/ngo/src/component/layout_1/Students/StudentTableComponent.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend-server/ngo/src/component/layout_1/Students/createStudents.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Frontend-server/ngo/src/component/layout_1/examples/StudentTable.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend-server/ngo/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend-server/ngo/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend-server/ngo/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend-server/ngo/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend-server/ngo/src/component/layout_1/examples/ContactPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend-server/ngo/src/component/layout_1/examples/ContactPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend-server/ngo/src/component/layout_1/header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend-server/ngo/src/component/layout_1/header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend-server/ngo/src/component/utils/Constant.js" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend-server/ngo/src/component/utils/Constant.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend-server/ngo/src/routes/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend-server/ngo/src/routes/index.jsx" afterDir="false" />
-    </list>
+    <list default="true" id="a4a373aa-2329-48cc-834f-3738679814dd" name="Changes" comment="structured folders" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -102,7 +89,7 @@
       <workItem from="1736235090671" duration="595000" />
       <workItem from="1736743508861" duration="612000" />
       <workItem from="1736993485311" duration="586000" />
-      <workItem from="1737169063133" duration="10673000" />
+      <workItem from="1737169063133" duration="10893000" />
     </task>
     <task id="LOCAL-00001" summary="structured folders">
       <option name="closed" value="true" />
@@ -120,7 +107,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735538112729</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="structured folders">
+      <option name="closed" value="true" />
+      <created>1737191251320</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1737191251320</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
