@@ -5,6 +5,8 @@ import Organizations from './models/organizations';
 import Roles from './models/roles';
 import UserOrgs from './models/user_organization';
 import UserOrgRoles from './models/user_org_roles';
+import FieldDetails from './models/fieldDetails';
+import Tab from './models/tab';
 
 export async function syncDatabase(options: SyncOptions) {
     await sequelize.authenticate();
@@ -19,4 +21,6 @@ export const AllModels = {
     Roles,
     UserOrgs,
     UserOrgRoles,
+    Tab,
+    FieldDetails
 };

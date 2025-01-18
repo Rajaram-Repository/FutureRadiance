@@ -17,8 +17,8 @@ dotenv.config({
 export const W_ENV = process.env.W_ENV ?? 'local';
 export const DB_CONFIG: IDBConfig = {
     username: process.env.DB_USER ?? 'root',
-    password: process.env.DB_PASSWORD ?? 'Letmein@123',
-    database: process.env.DB_NAME ?? 'sf',
+    password: process.env.DB_PASSWORD ?? '2468',
+    database: process.env.DB_NAME ?? 'futureradiance',
     host: process.env.DB_HOST ?? 'localhost',
     dialect: 'mysql',
 };
