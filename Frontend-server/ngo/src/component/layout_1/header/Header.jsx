@@ -6,6 +6,7 @@ import { navigationBarList } from "../../utils/constant";
 
 function Header() {
   const navBarList = useSelector((state) => state?.userData?.navBarList);
+  console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",navBarList);
   const location = useLocation();
   console.log("1");
   const navBarListCheck = useSelector((state) => state?.userData);

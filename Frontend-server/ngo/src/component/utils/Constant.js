@@ -12,6 +12,10 @@ export const navigationBarList = {
     name: "Org",
     path: "/org",
   },
+  addOrg: {
+    name: "Add Org",
+    path: "/addorg",
+  }
 };
 
 export const VIEW_COUNT = 10;

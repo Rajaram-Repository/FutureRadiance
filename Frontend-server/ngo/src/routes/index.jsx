@@ -27,6 +27,7 @@ const generateRoutes = async (dispatch) => {
       })
       .filter(Boolean);
     // return dynamicRoutes;  //if Home page not for all means uncomment and use this.
+    console.log("mmmmmmmmmmmmmmmmmmmmmmmmmmmm",dynamicRoutes)
     return [
       ...dynamicRoutes,
       {

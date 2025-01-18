@@ -1,0 +1,294 @@
+/* CloneStudent.module.css */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.title h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+
+.editLayout {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+.actions button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.cancelBtn {
+  background: #fff;
+  border: 1px solid #ddd;
+}
+
+.saveNewBtn {
+  background: #fff;
+  border: 1px solid #ddd;
+}
+
+.saveBtn {
+  background: #0066cc;
+  color: white;
+  border: none;
+}
+
+.formSection {
+  margin-bottom: 32px;
+}
+
+.formSection h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.imageUpload {
+  width: 150px;
+  height: 150px;
+  border: 2px dashed #ddd;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f5f5;
+  border-radius: 6px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formGroup label {
+  color: #666;
+  font-size: 14px;
+}
+
+.formGroup input,
+.formGroup textarea {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.dateInput {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  position: relative;
+}
+
+.dateInput input:first-child {
+  flex: 2;
+}
+
+.dateInput input:last-child {
+  flex: 1;
+}
+
+.dateIcon {
+  position: absolute;
+  right: 8px;
+  color: #666;
+  width: 16px;
+  height: 16px;
+}
+
+.ownerInput {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.ownerInput input {
+  width: 100%;
+  padding-right: 60px;
+}
+
+.ownerInput svg {
+  position: absolute;
+  right: 36px;
+  color: #666;
+  width: 16px;
+  height: 16px;
+}
+
+.ownerIcon {
+  position: absolute;
+  right: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.subjectTags {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tag {
+  background: #f0f0f0;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+
+/* Add these styles to your existing CloneStudent.module.css */
+/* Update these styles in your CloneStudent.module.css */
+
+.weeklyTable {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow-x: auto; /* Specifically enable horizontal scroll */
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.weeklyHeader,
+.weeklyRow {
+  display: grid;
+  /* Increased minimum widths for each column */
+  grid-template-columns:
+    minmax(40px, 40px)     /* drag handle */
+    minmax(140px, 140px)   /* date - increased width */
+    minmax(160px, 160px)   /* subject - increased width */
+    minmax(160px, 160px)   /* topic */
+    minmax(160px, 160px)   /* volunteer */
+    minmax(200px, 200px)   /* activities */
+    minmax(200px, 200px)   /* progress notes */
+    minmax(200px, 200px)   /* teaching notes */
+    minmax(200px, 200px)   /* overall feedback */
+    minmax(80px, 80px)    /* actions */
+    minmax(90px, 90px);
+  gap: 12px; /* Reduced gap to prevent overlapping */
+  padding: 12px 16px;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Fix overlapping inputs */
+.weeklyRow > div {
+  position: relative; /* For absolute positioning of icons */
+  min-width: 0;
+  width: 100%;
+  overflow: hidden; /* Contain overflowing content */
+}
+
+/* Ensure all form controls stay within bounds */
+.weeklyRow input,
+.weeklyRow select,
+.weeklyRow textarea {
+  width: 100%;
+  padding: 8px 24px 8px 8px; /* Increased right padding for icons */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box; /* Include padding in width calculation */
+  background-color: white; /* Ensure background covers overflow */
+}
+
+/* Position dropdown icons correctly */
+.subjectSelect,
+.volunteerSelect {
+  position: relative;
+}
+
+.subjectSelect svg,
+.volunteerSelect svg {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Prevent date input from expanding */
+.weeklyRow input[type="text"] {
+  min-width: 0;
+  width: 100%;
+}
+
+/* Action buttons container */
+.rowActions {
+  display: flex;
+  gap: 4px;
+  justify-content: flex-end;
+  min-width: 80px !important;
+}
+
+/* Make sure the table header stays fixed */
+.weeklyHeader {
+  background-color: #f5f5f5;
+  font-weight: 500;
+  position: relative;
+
+  width: 100%;
+  top: 0;
+  z-index: 2;
+
+}
+
+/* Add horizontal scroll indicator */
+.weeklyTable::after {
+  content: '';
+  position: relative;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  background: linear-gradient(to right, transparent, rgba(0,0,0,0.05));
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.weeklyTable:hover::after {
+  opacity: 1;
+}
