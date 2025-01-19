@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4a373aa-2329-48cc-834f-3738679814dd" name="Changes" comment="structured folders" />
+    <list default="true" id="a4a373aa-2329-48cc-834f-3738679814dd" name="Changes" comment="structured folders">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/config/local.env" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/config/local.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/config/serviceConfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/config/serviceConfig.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/controllers/fieldController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/controllers/fieldController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/controllers/tabsController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/controllers/tabsController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/src/routes/tabsRoutes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/routes/tabsRoutes.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,21 +60,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;ngo__v1&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Alphi-Aravind.S/Projects/Presentation/healthcare_presentation&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Alphi-Aravind.S\\Projects\\Crm_Ngo\\RajaFoundation\\Sundarbranch\\SmileFoundationIndia\\Backend\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "new",
+    "last_opened_file_path": "C:/Users/Alphi-Aravind.S/Projects/Crm_Ngo/RajaBranch",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Users\\Alphi-Aravind.S\\Projects\\Crm_Ngo\\RajaBranch\\Backend\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -90,6 +99,8 @@
       <workItem from="1736743508861" duration="612000" />
       <workItem from="1736993485311" duration="586000" />
       <workItem from="1737169063133" duration="10893000" />
+      <workItem from="1737285565073" duration="203000" />
+      <workItem from="1737285776026" duration="1955000" />
     </task>
     <task id="LOCAL-00001" summary="structured folders">
       <option name="closed" value="true" />
@@ -132,7 +143,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/ngo_v1" />
+                        <option value="HEAD" />
                       </list>
                     </value>
                   </entry>
@@ -159,7 +170,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/Frontend-server/ngo/src/component/layout_1/Students/createStudents.jsx</url>
           <line>239</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>

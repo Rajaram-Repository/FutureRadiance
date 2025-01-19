@@ -1,7 +1,8 @@
 import { Request, Response } from 'express';
 import FieldDetails from 'src/db/models/fieldDetails'; // Import the FieldDetails model
-import Tab from 'src/db/models/tab'; // Import Tab model
-import UserOrganization from 'src/db/models/user_organization'; // Import UserOrganization model
+// import Tab from 'src/db/models/tab';
+import UserOrganization from 'src/db/models/user_organization';
+import Tab from "../db/models/tab"; // Import UserOrganization model
 
 // Get all field details by tabId
 export const getFieldDetailsByTabId = async (req: Request, res: Response) => {

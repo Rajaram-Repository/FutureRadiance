@@ -1,8 +1,9 @@
 import { Request, Response } from 'express';
-import Tab from 'src/db/models/tab'; // Assuming your Tab model is located at this path
+// import Tab from 'src/db/models/tab';
 import { Op } from 'sequelize'; // Used for query filtering
-import UserOrganization from 'src/db/models/user_organization'; // Assuming this is the model for User
-import FieldDetails from 'src/db/models/fieldDetails';
+import UserOrganization from '../db/models/user_organization'; // Assuming this is the model for User
+import FieldDetails from '../db/models/fieldDetails';
+import Tab from "../db/models/tab";
 
 // Get all tabs for a specific organization
 export const getTabsByOrgId = async (req: Request, res: Response) => {

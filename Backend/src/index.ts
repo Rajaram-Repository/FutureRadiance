@@ -1,9 +1,11 @@
 import express from 'express';
 import { syncDatabase } from './db/sync';
+import router from "./routes/tabsRoutes";
 
 const App = express();
 
-App.use(express.json());
+App.use(express.json())
+App.use('/', router);
 
 syncDatabase({ alter: true })
     .then(() => {
@@ -11,4 +13,4 @@ syncDatabase({ alter: true })
     })
     .catch(console.error);
 
-App.listen(3000, () => console.log('Express server started'));
+App.listen(3001, () => console.log('Express server started'));
