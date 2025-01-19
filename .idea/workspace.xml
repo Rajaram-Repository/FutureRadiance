@@ -6,13 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a4a373aa-2329-48cc-834f-3738679814dd" name="Changes" comment="structured folders">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/config/local.env" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/config/local.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/config/serviceConfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/config/serviceConfig.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/controllers/fieldController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/controllers/fieldController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/controllers/tabsController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/controllers/tabsController.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/src/routes/tabsRoutes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/routes/tabsRoutes.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +94,7 @@
       <workItem from="1736993485311" duration="586000" />
       <workItem from="1737169063133" duration="10893000" />
       <workItem from="1737285565073" duration="203000" />
-      <workItem from="1737285776026" duration="1955000" />
+      <workItem from="1737285776026" duration="2854000" />
     </task>
     <task id="LOCAL-00001" summary="structured folders">
       <option name="closed" value="true" />
@@ -126,7 +120,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737191251320</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="structured folders">
+      <option name="closed" value="true" />
+      <created>1737287845657</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1737287845657</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
