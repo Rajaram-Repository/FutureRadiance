@@ -6,6 +6,8 @@ import Tab from './tab'; // Import Tab model
 class FieldDetails extends Model {
     declare fieldId: CreationOptional<number>;
     declare fieldName: string;
+    declare sysfieldName: string;
+    declare colname: string;
     declare createdBy: ForeignKey<UserOrganization['id']>;
     declare createTime: Date;
     declare modifiedTime: Date;
@@ -13,9 +15,13 @@ class FieldDetails extends Model {
     declare fieldType: number; // Integer (1 to 20)
     declare tabId: ForeignKey<Tab['tabId']>;
     declare fieldSequence: number;
+    declare sectionname: string;
+    declare sectionid: number;
     declare active: boolean;
     declare generatedType: number; // Integer (1 to 5)
     declare uiType: number; // Integer (1 to 20)
+    declare listview: boolean;
+    declare visible: boolean;
     declare readOnly: boolean;
     declare isMandatory: boolean;
     declare isSearchable: boolean;
@@ -33,6 +39,14 @@ FieldDetails.init(
             autoIncrement: true,
         },
         fieldName: {
+            type: DataTypes.STRING(255),
+            allowNull: false,
+        },
+        sysfieldName: {
+            type: DataTypes.STRING(255),
+            allowNull: false,
+        },
+        colname: {
             type: DataTypes.STRING(255),
             allowNull: false,
         },
@@ -81,6 +95,14 @@ FieldDetails.init(
             type: DataTypes.INTEGER,
             allowNull: false,
         },
+        sectionname: {
+            type: DataTypes.STRING(255),
+            allowNull: false,
+        },
+        sectionid: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        },
         active: {
             type: DataTypes.BOOLEAN,
             allowNull: false,
@@ -101,6 +123,16 @@ FieldDetails.init(
                 min: 1,
                 max: 20,
             },
+        },
+        listview: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+            defaultValue: false,
+        },
+        visible: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+            defaultValue: false,
         },
         readOnly: {
             type: DataTypes.BOOLEAN,

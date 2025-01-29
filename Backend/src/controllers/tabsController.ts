@@ -14,10 +14,10 @@ export const getTabsByOrgId = async (req: Request, res: Response) => {
             where: {
                 orgId: orgId, // Filter by organization ID
             },
-            include: [
-                { model: UserOrganization, as: 'modifiedByUser' }, // Including modifiedByUser if needed
-                { model: UserOrganization, as: 'createdByUser' }, // Including createdByUser if needed
-            ],
+            // include: [
+            //     { model: UserOrganization, as: 'modifiedByUser' }, // Including modifiedByUser if needed
+            //     { model: UserOrganization, as: 'createdByUser' }, // Including createdByUser if needed
+            // ],
         });
         return res.status(200).json(tabs);
     } catch (error) {

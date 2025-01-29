@@ -1,0 +1,19 @@
+{
+  "name": "futureradiance",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rajaram-Repository/FutureRadiance.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rajaram-Repository/FutureRadiance/issues"
+  },
+  "homepage": "https://github.com/Rajaram-Repository/FutureRadiance#readme",
+  "description": ""
+}
