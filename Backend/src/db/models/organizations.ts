@@ -6,6 +6,7 @@ class Organizations extends Model<InferAttributes<Organizations>, InferCreationA
     declare name: string;
     declare email: string;
     declare address: string;
+    declare description: string;
     declare phoneNumber: string;
     declare readonly createdAt: Date;
     declare readonly updatedAt: Date;
@@ -30,6 +31,10 @@ Organizations.init(
             unique: true,
         },
         address: {
+            type: DataTypes.STRING(255),
+            allowNull: false,
+        },
+        description: {
             type: DataTypes.STRING(255),
             allowNull: false,
         },
