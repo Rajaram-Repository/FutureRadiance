@@ -6,6 +6,7 @@ import UserOrganization from './user_organization';  // Corrected import for the
 class Tab extends Model<InferAttributes<Tab>, InferCreationAttributes<Tab>> {
     declare tabId: CreationOptional<number>;
     declare name: string;
+    declare sysname: string;
     declare active: boolean;
     declare tabSequence: number;
     declare tabLabel: string;
@@ -30,6 +31,10 @@ Tab.init(
             autoIncrement: true,
         },
         name: {
+            type: DataTypes.STRING(255),
+            allowNull: false,
+        },
+        sysname: {
             type: DataTypes.STRING(255),
             allowNull: false,
         },

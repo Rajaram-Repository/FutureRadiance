@@ -1,7 +1,8 @@
 import { Request, Response } from 'express';
-import FieldDetails from 'src/db/models/fieldDetails'; // Import the FieldDetails model
-import Tab from 'src/db/models/tab'; // Import Tab model
-import UserOrganization from 'src/db/models/user_organization'; // Import UserOrganization model
+import FieldDetails from '../db/models/fieldDetails';
+// import Tab from 'src/db/models/tab';
+import UserOrganization from 'src/db/models/user_organization';
+import Tab from "../db/models/tab"; // Import UserOrganization model
 
 // Get all field details by tabId
 export const getFieldDetailsByTabId = async (req: Request, res: Response) => {
@@ -10,11 +11,11 @@ export const getFieldDetailsByTabId = async (req: Request, res: Response) => {
     try {
         const fields = await FieldDetails.findAll({
             where: { tabId: parseInt(tabId) },
-            include: [
-                { model: Tab, as: 'tab' }, // Include Tab data
-                { model: UserOrganization, as: 'creator' }, // Include creator data
-                { model: UserOrganization, as: 'modifier' }, // Include modifier data
-            ],
+            // include: [
+            //     { model: Tab, as: 'tab' }, // Include Tab data
+            //     { model: UserOrganization, as: 'creator' }, // Include creator data
+            //     { model: UserOrganization, as: 'modifier' }, // Include modifier data
+            // ],
         });
 
         if (fields.length === 0) {
