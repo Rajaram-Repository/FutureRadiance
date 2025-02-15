@@ -16,6 +16,7 @@ class FieldDetails extends Model {
     declare tabId: ForeignKey<Tab['tabId']>;
     declare fieldSequence: number;
     declare sectionname: string;
+    declare tabelname: string;
     declare sectionid: number;
     declare active: boolean;
     declare generatedType: number; // Integer (1 to 5)
@@ -96,6 +97,10 @@ FieldDetails.init(
             allowNull: false,
         },
         sectionname: {
+            type: DataTypes.STRING(255),
+            allowNull: false,
+        },
+        tabelname: {
             type: DataTypes.STRING(255),
             allowNull: false,
         },
