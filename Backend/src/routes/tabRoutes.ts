@@ -10,7 +10,7 @@ import {
 } from '../controllers/fieldController';
 import  UserController  from '../controllers/usercontroller';
 import * as console from "node:console";
-import { getListFieldDetailsByTabId, } from '../controllers/recordController';
+import { getListFieldDetailsByTabId, getRecordDetailsById,} from '../controllers/recordController';
 
 const router = express.Router();
 
@@ -22,9 +22,12 @@ router.get('/', (req, res) => {
 
 
 router.post('/signup',UserController.signup); // signupS
-router.get('/org/:orgId', getTabsByOrgId); // Get all tab from org id
-router.get('/org/tab/:tabId', getFieldDetailsByTabId); // get all field from tab
-router.get('/org/tab/create/:tabId', getListFieldDetailsByTabId);
+
+router.get('/:orgId', getTabsByOrgId); // get all tab from org id
+router.get('/org/:tabId', getListFieldDetailsByTabId); // get list view from tabid
+router.get('/org/field/:tabId', getFieldDetailsByTabId); // get all field and subform field from tab
+router.get('/org/:tabId/:recordId', getRecordDetailsById); // get deatils view ; All record with subform
+
 
 
 router.post('/tabs', createTab);

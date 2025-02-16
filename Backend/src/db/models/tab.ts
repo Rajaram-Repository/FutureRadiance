@@ -6,7 +6,7 @@ import UserOrganization from './user_organization';  // Corrected import for the
 class Tab extends Model<InferAttributes<Tab>, InferCreationAttributes<Tab>> {
     declare tabId: CreationOptional<number>;
     declare name: string;
-    declare sysname: string;
+    declare sysname: string; 
     declare active: boolean;
     declare tabSequence: number;
     declare tabLabel: string;
@@ -15,7 +15,7 @@ class Tab extends Model<InferAttributes<Tab>, InferCreationAttributes<Tab>> {
     declare generatedType: 1 | 2 | 3 | 4 | 5; // Enum for generatedType
     declare visibility: boolean;
     declare parentTabId: number | null; // Reference to the same tabId for parent-child relationship
-    declare tabType: 1 | 2 | 3 | 4 | 5; // Enum for tabType
+    declare tabType: 1 | 2 | 3 | 4 | 5; // Enum for tabType - 1 - maintab; 2 - subform tab
     declare description: string;
     declare createdBy: ForeignKey<UserOrganization['id']>;  // Corrected to reference the user_organization model
     declare createdTime: Date;

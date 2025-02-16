@@ -1,6 +1,6 @@
 import express from 'express';
 import { syncDatabase } from './db/sync';
-import router from "./routes/tabsRoutes";
+import router from "./routes/tabRoutes";
 
 const App = express();
 

@@ -1,6 +1,5 @@
 import { DataTypes, InferAttributes, InferCreationAttributes, CreationOptional, Model } from 'sequelize';
 import sequelize from '../connection';
-import FieldDetails from './fieldDetails';
 import Tab from './tab';
 
 class RecordDetails1 extends Model {

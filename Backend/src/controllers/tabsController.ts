@@ -8,11 +8,11 @@ import Tab from "../db/models/tab";
 // Get all tabs for a specific organization
 export const getTabsByOrgId = async (req: Request, res: Response) => {
     const { orgId } = req.params;
-
     try {
         const tabs = await Tab.findAll({
             where: {
                 orgId: orgId, // Filter by organization ID
+                tabType: 1 ,//main tab only
             },
             // include: [
             //     { model: UserOrganization, as: 'modifiedByUser' }, // Including modifiedByUser if needed

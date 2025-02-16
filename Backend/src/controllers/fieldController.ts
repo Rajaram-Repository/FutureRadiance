@@ -17,12 +17,21 @@ export const getFieldDetailsByTabId = async (req: Request, res: Response) => {
             //     { model: UserOrganization, as: 'modifier' }, // Include modifier data
             // ],
         });
+        const sub_id = await Tab.findAll({
+            where: {  parentTabId: parseInt(tabId)  }
+        });
 
+        const subTabIds = sub_id.map(tab => tab.tabId);
+
+        const sub_fields = await FieldDetails.findAll({
+            where: { tabId: subTabIds }
+        });
+        
         if (fields.length === 0) {
             return res.status(404).json({ message: 'No field details found for this tab' });
         }
 
-        return res.status(200).json(fields);
+        return res.status(200).json({fields,sub_fields});
     } catch (error) {
         return res.status(500).json({ error: 'Error fetching field details', details: error.message });
     }
