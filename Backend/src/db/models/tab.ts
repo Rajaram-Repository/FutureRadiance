@@ -10,6 +10,7 @@ class Tab extends Model<InferAttributes<Tab>, InferCreationAttributes<Tab>> {
     declare active: boolean;
     declare tabSequence: number;
     declare tabLabel: string;
+    declare tableName: string;
     declare modifiedBy: ForeignKey<UserOrganization['id']>;  // Corrected to reference the user_organization model
     declare modifiedTime: Date;
     declare generatedType: 1 | 2 | 3 | 4 | 5; // Enum for generatedType
@@ -51,6 +52,11 @@ Tab.init(
         tabLabel: {
             type: DataTypes.STRING(255),
             allowNull: false,
+        },
+        tableName: {
+            type: DataTypes.STRING(255),
+            allowNull: false,
+            defaultValue :"RecordDetails1"
         },
         modifiedBy: {
             type: DataTypes.INTEGER,

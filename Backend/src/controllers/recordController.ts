@@ -4,8 +4,11 @@ import FieldDetails from '../db/models/fieldDetails';
 import UserOrganization from 'src/db/models/user_organization';
 import Tab from "../db/models/tab"; // Import UserOrganization model
 import RecordDetails1 from '../db/models/recordDetails1';
-import { Sequelize } from 'sequelize';
 import SubRecordDetails1 from '../db/models/subRecordDetails1';
+  
+import { Sequelize } from 'sequelize';
+import sequelize from '../db/connection'; // Assuming you have the sequelize instance here
+
 
 // Get all field details by tabId
 export const getListFieldDetailsByTabId = async (req: Request, res: Response) => {
@@ -149,3 +152,110 @@ export const getRecordDetailsById = async (req: Request, res: Response) => {
         return res.status(500).json({ error: 'Error fetching field details', details: error.message });
     }
 };
+
+export const createRecordwithoutsubfrom = async (req: Request, res: Response) => {
+    
+    const { tab_id, fields } = req.body;
+
+    try {
+        let recordData: { tabId: number; [key: string]: any } = { tabId: tab_id }; 
+        for (let i = 0; i < fields.length; i++) {
+          const field = fields[i];
+    
+          // Find the corresponding FieldDetails record by field_id
+          const fieldDetail = await FieldDetails.findOne({
+            where: { fieldId: field.field_id }
+          });
+          console.log(fieldDetail);
+          if (fieldDetail) {
+            // Dynamically assign the value to the corresponding column name (col1, col2, etc.)
+            recordData[fieldDetail.colname] = field.value;
+          } else {
+            console.warn(`Field with field_id ${field.field_id} not found in FieldDetails.`);
+          }
+        }
+        console.log(recordData);
+        // Create the record in RecordDetails1
+        const record = await RecordDetails1.create(recordData);
+    
+        // Return success response
+        res.status(201).json({
+          message: 'Record created successfully!'
+        });
+      } catch (error) {
+        console.error('Error creating record:', error);
+        res.status(500).json({ message: 'Error creating record', error: error.message });
+      }
+    }
+
+
+
+ 
+    export const createRecord = async (req: Request, res: Response) => {
+        const { tab_id, fields, subforms } = req.body;
+        const createdRecords = [];
+        try{
+        const tab = await Tab.findOne({
+            where: { tabId: tab_id }
+          });
+          if (!tab) {
+            return res.status(400).json({ message: `Tab not found for tab_id ${tab_id}` });
+          }
+          const tableName = tab.tableName;  
+          console.log(tableName);
+          const recordDetailsTable = sequelize.models[tableName];
+          if (!recordDetailsTable) {
+            return res.status(400).json({ message: `No corresponding table found for tab_id ${tab_id}` });
+          }
+          let recordData: { tabId: number; [key: string]: any } = { tabId: tab_id };
+          for (let field of fields) {
+            const fieldDetail = await FieldDetails.findOne({
+              where: { fieldId: field.field_id }
+            });
+    
+            if (fieldDetail) {
+              recordData[fieldDetail.colname] = field.value;
+            } else {
+              console.warn(`Field with field_id ${field.field_id} not found in FieldDetails.`);
+            }
+          }
+          const createdRecord = await recordDetailsTable.create(recordData);
+          createdRecords.push(createdRecord);
+          for (let subform of subforms) {
+            const subformTab = await Tab.findOne({ where: { tabId: subform.subform } });
+  
+            if (!subformTab) {
+              return res.status(400).json({ message: `Subform Tab not found for subform ${subform.subform}` });
+            }
+            const subformTableName = subformTab.tableName; 
+            const subformDetailsTable = sequelize.models[subformTableName];
+  
+            if (!subformDetailsTable) {
+              return res.status(400).json({ message: `No corresponding table found for subform ${subform.subform}` });
+            }
+            for (let subformRecordFields of subform.subform_fields) {
+                let subformData = {
+                  recordId: createdRecord.id // Link subform to main record using recordId
+                };
+                for (let subformField of subformRecordFields) {
+                const fieldDetail = await FieldDetails.findOne({ where: { fieldId: subformField.field_id } });
+    
+                if (fieldDetail) {
+                  subformData[fieldDetail.colname] = subformField.value;
+                }
+              }
+    
+              // Save the subform record
+              await subformDetailsTable.create(subformData);
+            }
+        }
+        res.status(201).json({
+          message: 'Records created successfully!'
+        });
+    
+      } catch (error) {
+        console.error('Error creating records:', error);
+        res.status(500).json({ message: 'Error creating records', error: error.message });
+      }
+    };
+    
