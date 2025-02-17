@@ -258,4 +258,113 @@ export const createRecordwithoutsubfrom = async (req: Request, res: Response) =>
         res.status(500).json({ message: 'Error creating records', error: error.message });
       }
     };
+  
+    export const editRecord = async (req: Request, res: Response) => {
+      const { tab_id, record_id, fields, subforms } = req.body;
+    
+      try {
+        // Find the Tab related to the provided tab_id
+        const tab = await Tab.findOne({
+          where: { tabId: tab_id }
+        });
+    
+        if (!tab) {
+          return res.status(400).json({ message: `Tab not found for tab_id ${tab_id}` });
+        }
+    
+        const tableName = tab.tableName;
+        console.log(tableName);
+    
+        // Get the table model for the specific tab
+        const recordDetailsTable = sequelize.models[tableName];
+        if (!recordDetailsTable) {
+          return res.status(400).json({ message: `No corresponding table found for tab_id ${tab_id}` });
+        }
+    
+        // Find the existing record by its record_id
+        const existingRecord = await recordDetailsTable.findOne({
+          where: { id: record_id }
+        });
+    
+        if (!existingRecord) {
+          return res.status(400).json({ message: `Record not found with record_id ${record_id}` });
+        }
+    
+        // Update fields based on provided data
+        for (let field of fields) {
+          const fieldDetail = await FieldDetails.findOne({
+            where: { fieldId: field.field_id }
+          });
+    
+          if (fieldDetail) {
+            existingRecord[fieldDetail.colname] = field.value;
+          } else {
+            console.warn(`Field with field_id ${field.field_id} not found in FieldDetails.`);
+          }
+        }
+    
+        // Save updated main record
+        await existingRecord.save();
+    
+        // Process subforms
+        for (let subform of subforms) {
+          const subformTab = await Tab.findOne({ where: { tabId: subform.subform } });
+    
+          if (!subformTab) {
+            return res.status(400).json({ message: `Subform Tab not found for subform ${subform.subform}` });
+          }
+    
+          const subformTableName = subformTab.tableName;
+          const subformDetailsTable = sequelize.models[subformTableName];
+    
+          if (!subformDetailsTable) {
+            return res.status(400).json({ message: `No corresponding table found for subform ${subform.subform}` });
+          }
+    
+          // Process each subform row and update or create subform records
+          for (let subformRecordFields of subform.subform_fields) {
+            const subformData = {
+              recordId: existingRecord.id, // Link subform to main record using recordId
+            };
+    
+            // Add fields from the subform
+            for (let field of subformRecordFields) {
+              if (field.field_id) {
+                const fieldDetail = await FieldDetails.findOne({ where: { fieldId: field.field_id } });
+    
+                if (fieldDetail) {
+                  subformData[fieldDetail.colname] = field.value;
+                } else {
+                  console.warn(`Field with field_id ${field.field_id} not found in FieldDetails for subform.`);
+                }
+              }
+            }
+    
+            // Check if subform record already exists by its id (if provided)
+            if (subformRecordFields[0].id) {
+              const existingSubformRecord = await subformDetailsTable.findOne({
+                where: { id: subformRecordFields[0].id, recordId: existingRecord.id }
+              });
+    
+              if (existingSubformRecord) {
+                await existingSubformRecord.update(subformData);
+              } else {
+                return res.status(400).json({ message: `Subform record with id ${subformRecordFields[0].id} not found.` });
+              }
+            } else {
+              // If no subform record ID is provided, create a new subform record
+              await subformDetailsTable.create(subformData);
+            }
+          }
+        }
+    
+        res.status(200).json({
+          message: 'Records updated successfully!'
+        });
+    
+      } catch (error) {
+        console.error('Error updating records:', error);
+        res.status(500).json({ message: 'Error updating records', error: error.message });
+      }
+    };
     

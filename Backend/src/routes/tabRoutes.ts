@@ -10,7 +10,7 @@ import {
 } from '../controllers/fieldController';
 import  UserController  from '../controllers/usercontroller';
 import * as console from "node:console";
-import { getListFieldDetailsByTabId, getRecordDetailsById,createRecord,} from '../controllers/recordController';
+import { getListFieldDetailsByTabId, getRecordDetailsById,createRecord, editRecord,} from '../controllers/recordController';
 
 const router = express.Router();
 
@@ -28,9 +28,9 @@ router.get('/org/:tabId', getListFieldDetailsByTabId); // get list view from tab
 router.get('/org/field/:tabId', getFieldDetailsByTabId); // get all field and subform field from tab [Create]
 router.get('/org/:tabId/:recordId', getRecordDetailsById); // get record detail view ; All record with subform [Detail View]
 router.post('/createRecord',createRecord); // create record with subfrom 
+router.put('/editRecord',editRecord); // edit record with subform
 
-
-router.post('/tabs', createTab);
+router.put('/tabs', createTab);
 
 router.put('/tabs/:tabId', editTab);
 
